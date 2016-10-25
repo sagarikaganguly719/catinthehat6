@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+   .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 100%;
+        margin:0px;
+    } 
+    #blush1:hover{
+        background-color:yellow;
+        font-size:20px;
+        font-style:bold;
+        color:black;
+        
+     }
+     .fixed-nav-bar{
+         position:fixed;
+         top:0;
+         left:0;
+         right:0;
+         z-index:9999;
+     }
+</style>
+</head>
+<body>
+<div class="jumbotron" style="background-color:white; background-image:url(Leaves4.gif);margin:0px;">
+        <h1  class="text-left" style="color:darkgreen;"> TreeHouse.in <span class="glyphicon glyphicon-tree-deciduous" ></span> 
+        <span class="btn btn-success btn-lg active" style="float:right;margin-top:20px;">Sign Up</span>
+        <span class="btn btn-warning btn-lg active" style="float:right;margin-top:20px;margin-right:5px">Login</span> </h1>            
+</div>
+    
+    <nav class="navbar fixed-nav-bar navbar-default " style="margin:0px;background-color:yellowgreen;">
+        
+            <div class="navbar-header" style="color:white;font-style:bold;font-size:20px;">
+ <a id="blush1" class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" style="font-size:20px;" ></span></a>                                       
+            </div>
+            <ul class="nav navbar-nav" style="background-color:yellowgreen;color:white;font-size:20px;font-style:bold;">
+                <li ><a id="blush1" href="#" >View</a></li>
+                <li class="dropdown" ><a id="blush1" class="dropdown-toggle" data-toggle="dropdown" href="#" >Bleh<span class="caret" ></span></a>
+                    <ul class="dropdown-menu"  style="background-color:yellowgreen">
+                        <li  style="color:black;font-size:20px;font-style:bold;"><a id="blush1" href="#" >Bleh1-1</a></li>
+                        <li style="color:black;font-size:20px;font-style:bold;"><a id="blush1" href="#" >Bleh1-2</a></li>
+                        <li style="color:black;font-size:20px;font-style:bold;"><a id="blush1" href="#" >Bleh1-3</a></li>
+                    </ul>
+                </li>
+            
+                <li ><a id="blush1" href="#" >Bleh-2</a></li>
+                <li ><a id="blush1" href="#" >Bleh-3</a></li>
+            </ul>           
+       
+    </nav>
+         
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="treehouse3.jpg" alt="treehouse1" >
+                <div class="carousel-caption">
+        <h3>Tree house 1</h3>
+        <p>So serene</p>
+      </div>
+            </div>
+            <div class="item">
+                <img src="treehouse4.jpg" alt="treehouse2">
+             </div>           
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"  ></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" ></span>
+        </a>
+    </div>
+   
+        <div class="row">
+            <div class="col-md-6" style="background-color: yellow;margin:0px;">
+                <h1>hello folks</h1>
+            </div>
+            <div class="col-md-6" style="background-color: yellowgreen">
+                <h1>hello peeps</h1>
+            </div>
+        </div>
+   
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
