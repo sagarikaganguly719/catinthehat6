@@ -11,10 +11,91 @@
     #myDiv{
         background-image: url(leaves8.jpg);
         background-attachment: fixed;
-        
-        
-    }
-   
+ }
+   #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar1 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: white;
+    color: lightseagreen;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar2 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: darkslateblue;
+    color: white ;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
 </style>
 </head>
 <body>
@@ -77,36 +158,49 @@
                 <span class="glyphicon glyphicon-chevron-right" ></span>
         </a>
     </div>
-    
-    <div>
-        
-    </div>
-    
-    
-    <div id="myDiv" class="row">
-        <div class="col-md-4"></div>
-        
-        <div class="col-md-4">
-             <form action="PH5.php" method="post">
-        <div class="form-group"  >
-            <label for="email"><h3>Email :</h3></label>
+        <div id="myDiv" class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+               
+                <form action="mail.php" method="post">
+                 <div class="form-group">
+            <label for="name"><h3 style="letter-spacing:3px;">Name :</h3></label>
+                    <input type="text" class="form-control input-lg " id="name" name="name1" placeholder="Name" required >
+              </div>
+        <div class="form-group">
+            <label for="email"><h3 style="letter-spacing:3px;">Email :</h3></label>
                     <input type="email" class="form-control input-lg" id="email" name="username" placeholder="Email" required >
               </div>
-            <div class="text-center">
-            <button type="submit" class="btn btn-success btn-block">Register</button>
-            </div>
-             </form>
-        </div>
-        <div class="col-md-4"  ></div>
-    </div>
-        <div class="row">
-            <div class="col-md-6" style="background-color: yellow;margin:0px;">
-                <h1>hello folks</h1>
-            </div>
-            
+             <div class="text-center">
+            <button type="submit" class="btn btn-success">Register</button>
+           </div>
+                </form>                    
+                        </div>        
+                </div>
+            </div>            
             <div id="map" class="col-md-6" style="height:400px;width:50%;margin:0px;"></div>
              </div>
+                <div class="jumbotron" style="height:250px;background-color:burlywood;margin:0px;" >
                 
+                <div class="text-center">
+                    <h4 style="color:white;"><span class="glyphicon glyphicon-tag" style="color:white;letter-spacing:3px;"></span>  Follow us at :</h4>
+                </div>
+                <div class="text-center">
+                    
+                    <button class="btn btn-default" onclick="myFunction1()"><img class="img-responsive "  src="instaicon.png" style="width:35px;height:35px;padding:0px;"></button>
+                     <button class="btn btn-default" onclick="myFunction2()"><img class="img-responsive " src="fbicon.png" style="width:35px;height:35px;padding:0px;"></button>
+                    <button class="btn btn-default" onclick="myFunction()"><img class="img-responsive " src="snapchaticon.png" style="width:35px;height:35px;padding:0px;"></button>
+                     
+                </div>
+                
+                <div id="snackbar1">Instagram : @treehouse_dot_in</div>
+                <div id="snackbar2">Facebook Page : TreeHouse.in</div>
+                <div id="snackbar">Snapchat : TreeHousedotin</div>
+                
+                
+            </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
@@ -120,14 +214,35 @@ function myMap() {
   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
   var marker = new google.maps.Marker({position: myCenter});
-
 marker.setMap(map);
+google.maps.event.addListener(marker,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"Symbiosis Institute of Technology"
+    });
+  infowindow.open(map,marker);
+  });
 }
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Y-_QuyXXb6Xy9xChFtnKJrZH2oMarws&callback=myMap"
 async defer></script>
+<script>
+            function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+function myFunction1() {
+    var x = document.getElementById("snackbar1")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+function myFunction2() {
+    var x = document.getElementById("snackbar2")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
-  
+</script>
 </body>
 </html>

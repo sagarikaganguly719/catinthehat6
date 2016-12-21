@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -21,12 +20,12 @@
        $sql="insert into login values('$name','$p')";
        $result=  mysqli_query($conn,$sql);
        if($result===true)
-       {
-           echo "new record created successfully";
+       { 
+           header("location:T4.html ");          
        }
        else
        {
-           echo "life is fucked";
+           echo "<script>alert('record already exists');window.location.href='T7.html';</script>";
        }
          }
         ?>
