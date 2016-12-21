@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           
+            #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar1 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: white;
+    color: lightseagreen;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar2 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: darkslateblue;
+    color: white ;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+            body,html{
+                height:100%;
+            }
+            .parallax-1{
+                /*the image used*/
+                background-image:url('th1.jpg');
+                /*opacity:0.9;*/
+                /*size of the image*/
+                height: 500px;
+                /*for the parallax scrolling effect*/
+                background-attachment:fixed;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover;
+                
+            }
+            .parallax-2{
+                /*the image used*/
+                background-image:url('th8.jpg');
+                /*opacity:0.9;*/
+                /*size of the image*/
+                height:500px;
+                /*for the parallax scrolling effect*/
+                background-attachment:fixed;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            .parallax-3{
+                /*the image used*/
+                background-image:url('th6.jpg');
+                /*opacity:0.9;*/
+                /*size of the image*/
+                height:500px;
+                /*for the parallax scrolling effect*/
+                background-attachment:fixed;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover;
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="parallax-1" style="margin:0px">
+            <div class="text-center">                
+                <h1 style="color:white;padding-top: 150px;letter-spacing:15px;word-spacing:25px;font-size: 65px;">WELCOME  TO</h1><br>
+                <h3 style="color:white;padding-top: 50px;letter-spacing:12px;font-size:45px;" >TreeHouse.in</h3>
+            </div>
+            </div>
+        
+        <div class="jumbotron" style="background-color:burlywood; margin:0px;">
+            <div class="text-center">
+           <h3 style="color:black;letter-spacing:7px;word-spacing:10px;">It is time to enjoy the vacation you've always wanted...</h3>
+            </div>
+        </div>
+           
+        <div class="parallax-2" style="margin:0px">
+            <div class="text-center">                
+                <h1 style="color:white;padding-top: 50px;letter-spacing:15px;word-spacing:25px;font-size: 65px;margin:0px;">in a place</h1><br>
+                <h3 style="color:white;padding-top: 50px;letter-spacing:12px;font-size:45px;margin:0px;" >that you could never imagine to be...</h3>
+            </div>
+        </div>
+        
+        <div class="jumbotron" style="background-color:burlywood; margin:0px;">
+            <div class="text-center">
+            <a href="T6.html"><h3 style="color:black;letter-spacing:7px;word-spacing:10px;">Enter into our world of treehouses</h3></a>
+            </div>
+        </div>
+        <div class="parallax-3" style=" margin:0px">
+            <div class="text-center">                
+                <h1 style="color:white;padding-top: 50px;letter-spacing:15px;word-spacing:25px;font-size: 65px;margin:0px;">and we hope</h1><br>
+                <h3 style="color:white;padding-top: 50px;letter-spacing:12px;font-size:45px;margin:0px;" >that you have a great experience.</h3>
+            </div>
+        </div>
+        
+            <div class="jumbotron" style="height:250px;background-color:black;margin:0px;" >
+                
+                <div class="text-center">
+                    <h4 style="color:white;"><span class="glyphicon glyphicon-tag" style="color:white;"></span>  Follow us at :</h4>
+                </div>
+                <div class="text-center">
+                    
+                    <button class="btn btn-default" onclick="myFunction1()"><img class="img-responsive "  src="instaicon.png" style="width:35px;height:35px;padding:0px;"></button>
+                     <button class="btn btn-default" onclick="myFunction2()"><img class="img-responsive " src="fbicon.png" style="width:35px;height:35px;padding:0px;"></button>
+                    <button class="btn btn-default" onclick="myFunction()"><img class="img-responsive " src="snapchaticon.png" style="width:35px;height:35px;padding:0px;"></button>
+                     
+                </div>
+                
+                <div id="snackbar1">Instagram : @treehouse_dot_in</div>
+                <div id="snackbar2">Facebook Page : TreeHouse.in</div>
+                <div id="snackbar">Snapchat : TreeHousedotin</div>
+                
+                
+            </div>
+            
+      
+        <script>
+            function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+function myFunction1() {
+    var x = document.getElementById("snackbar1")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+function myFunction2() {
+    var x = document.getElementById("snackbar2")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+            </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

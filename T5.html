@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
-          
-        </script>
-        <div style='overflow:hidden;height:440px;width:700px;'>
-            <div id='gmap_canvas' style='height:440px;width:700px;'>
-                
-            </div>
-            <div>
-                <small><a href="http://embedgooglemaps.com">embed google maps</a>
-                </small></div>
-            <div><small>
-                    <a href="https://www.amazon.com/Pawhut-Outdoor-Guinea-Rabbit-Habitat/dp/B008CB764C/">Guinea Pig Hutch</a>
-                </small>
-            </div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
-            <script type='text/javascript'>
-                function init_map(){
-                    var myOptions = {zoom:10,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Symbiosis Institute of Technology,Pune,Maharashtra,India<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-                                </script>
-    </body>
+<body>
+
+<div id="map" style="width:400px;height:400px"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(18.541630, 73.728414)
+  var mapOptions = {
+    center: myCenter,
+    zoom: 16,
+     mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position: myCenter});
+
+marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Y-_QuyXXb6Xy9xChFtnKJrZH2oMarws&callback=myMap"
+async defer></script>
+
+</body>
 </html>
