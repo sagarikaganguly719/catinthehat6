@@ -9,7 +9,7 @@
         <?php
          $host="localhost";
         $user="root";
-        $password="sagarika";
+        $password="---your password----";
         $database="login";
         
         $conn=mysqli_connect($host, $user, $password, $database);
