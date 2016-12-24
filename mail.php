@@ -18,10 +18,10 @@ $mail->SMTPAuth   = true;                  // enable SMTP authentication
 $mail->SMTPSecure = "tls";                 // sets the prefix to the servier
 $mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
 $mail->Port       = 587;                   // set the SMTP port for the GMAIL server
-$mail->Username   = "sagarika.719@gmail.com";  // GMAIL username
-$mail->Password   = "ILUV2EAT";            // GMAIL password
+$mail->Username   = "your gmail id";  // GMAIL username
+$mail->Password   = "your mail password";            // GMAIL password
 
-$mail->SetFrom('sagarika.719@gmail.com', 'Sagarika Ganguly'); //if it is different from username also no issues
+$mail->SetFrom('your gmail id', 'gmail username'); //if it is different from username also no issues
 
 //$mail->AddReplyTo("rameshkonda111@gmail.com","ramesh");
 
